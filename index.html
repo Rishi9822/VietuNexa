@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>MyGallery</h1>
+        </div>
+        <div class="nav-li">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li> <label class="switch">
+                        <input type="checkbox" class="toggle" placeholder=".">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="firstSection" id="home">
+            <div class="text1">
+                <div class="text">
+                    <h2>Welcome to MyGallery</h2><br>
+                    <p> A perfect place to find Wallpapers<br><br>
+                        Search images by categories
+                    </p><br>
+                    <div>
+                        <button class="btn" onclick="gallery()">Gallery</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="gallery">
+            <div class="container">
+                <input type="text" id="search" class="search-box" placeholder="Search images..."
+                    onkeyup="filterImages()">
+                <div class="filters">
+                    <button onclick="filterCategory('all')">All</button>
+                    <button onclick="filterCategory('nature')">Nature</button>
+                    <button onclick="filterCategory('cars')">Cars</button>
+                    <button onclick="filterCategory('animals')">Animals</button>
+                </div>
+                <div class="gallery">
+                    <img src="images/n_img1.jpg" data-category="nature" alt="Nature">
+                    <img src="images/n_img2.jpg" data-category="nature" alt="Nature">
+                    <img src="images/c_img1.jpg" data-category="cars" alt="Car">
+                    <img src="images/c_img2.jpg" data-category="cars" alt="Car">
+                    <img src="images/a_img1.jpg" data-category="animals" alt="Animal">
+                    <img src="images/a_img2.jpg" data-category="animals" alt="Animal">
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
